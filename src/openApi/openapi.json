@@ -13,7 +13,7 @@
     "version": "1.0"
   },
   "servers": [
-    { "url": "http://localhost:8088/api/v1", "description": "Local ENV" },
+    { "url": "http://localhost:8080/api/v1", "description": "Local ENV" },
     { "url": "https://acsn.tonydugue.fr", "description": "PROD ENV" }
   ],
   "security": [{ "bearerAuth": [] }],
@@ -21,7 +21,7 @@
     "/releases": {
       "get": {
         "tags": ["Release"],
-        "operationId": "findAllReleases", 
+        "operationId": "findAllReleases",
         "parameters": [
           {
             "name": "page",
