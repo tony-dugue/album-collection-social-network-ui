@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'activate-account', component: ActivateAccountComponent },
+  { path: 'releases', loadChildren: () => import('./features/release/release.module').then(m => m.ReleaseModule) }
 ];
 
 @NgModule({
