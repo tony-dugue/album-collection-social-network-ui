@@ -1,8 +1,7 @@
 <h3>Books list</h3>
 <hr />
 <div class="d-flex justify-content-start gap-2 flex-wrap">
-  <span *ngFor="let release of releaseResponse.content">{{ release.title }}</span>
+  <app-release-card [release]="release" *ngFor="let release of releaseResponse.content"></app-release-card>
 </div>
 
 
- 
