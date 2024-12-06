@@ -6,6 +6,7 @@ import { MainComponent } from './pages/main/main.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ReleaseListComponent } from './pages/release-list/release-list.component';
 import { ReleaseCardComponent } from './components/release-card/release-card.component';
+import { RatingComponent } from './components/rating/rating.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ReleaseCardComponent } from './components/release-card/release-card.com
     MainComponent,
     MenuComponent,
     ReleaseListComponent,
-    ReleaseCardComponent
+    ReleaseCardComponent,
+    RatingComponent
   ],
   imports: [
     CommonModule,

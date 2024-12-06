@@ -11,7 +11,10 @@
   </div>
 
   <div class="card-footer d-flex gap-2 justify-content-between align-items-center">
-    <div class="d-flex gap-2">5 stars</div>
+    <div class="d-flex gap-2">
+      <app-rating [rating]="release.rate || 0" />
+      <span class="fw-bold" *ngIf="release.rate || 0 > 0">{{release.rate}}</span>
+    </div>
     <div class="d-flex gap-2" *ngIf="!manage">
       <i (click)="onShowDetails()" class="fas fa-circle-info text-primary"></i>
       <i (click)="onBorrow()" class="fas fa-list-check text-primary"></i>
