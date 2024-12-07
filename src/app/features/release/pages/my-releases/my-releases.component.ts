@@ -76,6 +76,12 @@ export class MyReleasesComponent implements OnInit {
   }
 
   archiveRelease(release: ReleaseResponse) {
-    throw new Error('Method not implemented.');
+    this.releaseService.updateArchivedStatus({
+      'release-id': release.id as number
+    }).subscribe({
+      next: () => {
+        release.archived = !release.archived;
+      }
+    });
   }
 }
