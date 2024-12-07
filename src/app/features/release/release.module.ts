@@ -8,6 +8,8 @@ import { ReleaseListComponent } from './pages/release-list/release-list.componen
 import { ReleaseCardComponent } from './components/release-card/release-card.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { MyReleasesComponent } from './pages/my-releases/my-releases.component';
+import { ManageReleaseComponent } from './pages/manage-release/manage-release.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,11 +19,13 @@ import { MyReleasesComponent } from './pages/my-releases/my-releases.component';
     ReleaseListComponent,
     ReleaseCardComponent,
     RatingComponent,
-    MyReleasesComponent
+    MyReleasesComponent,
+    ManageReleaseComponent
   ],
   imports: [
     CommonModule,
-    ReleaseRoutingModule
+    ReleaseRoutingModule,
+    FormsModule
   ]
 })
 export class ReleaseModule { }
