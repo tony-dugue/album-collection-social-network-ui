@@ -11,7 +11,7 @@ import { MyReleasesComponent } from './pages/my-releases/my-releases.component';
 import { ManageReleaseComponent } from './pages/manage-release/manage-release.component';
 import { FormsModule } from '@angular/forms';
 import { BorrowedReleaseListComponent } from './pages/borrowed-release-list/borrowed-release-list.component';
-
+import { ReturnedReleasesComponent } from './pages/returned-releases/returned-releases.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +22,9 @@ import { BorrowedReleaseListComponent } from './pages/borrowed-release-list/borr
     RatingComponent,
     MyReleasesComponent,
     ManageReleaseComponent,
-    BorrowedReleaseListComponent
+    BorrowedReleaseListComponent,
+    ReturnedReleasesComponent,
   ],
-  imports: [
-    CommonModule,
-    ReleaseRoutingModule,
-    FormsModule
-  ]
+  imports: [CommonModule, ReleaseRoutingModule, FormsModule],
 })
-export class ReleaseModule { }
+export class ReleaseModule {}

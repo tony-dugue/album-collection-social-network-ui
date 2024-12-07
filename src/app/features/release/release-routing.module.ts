@@ -5,17 +5,21 @@ import { ReleaseListComponent } from './pages/release-list/release-list.componen
 import { MyReleasesComponent } from './pages/my-releases/my-releases.component';
 import { ManageReleaseComponent } from './pages/manage-release/manage-release.component';
 import { BorrowedReleaseListComponent } from './pages/borrowed-release-list/borrowed-release-list.component';
+import { ReturnedReleasesComponent } from './pages/returned-releases/returned-releases.component';
+import { authGuard } from '../../services/guard/auth.guard';
 
 const routes: Routes = [
   { 
     path: '', 
     component: MainComponent,
+    canActivate: [authGuard],
     children: [
-      { path: '', component: ReleaseListComponent },
-      { path: 'my-releases', component: MyReleasesComponent },
-      { path: 'manage', component: ManageReleaseComponent },
-      { path: 'manage/:releaseId', component: ManageReleaseComponent },
-      { path: 'my-borrowed-releases', component: BorrowedReleaseListComponent },
+      { path: '', component: ReleaseListComponent, canActivate: [authGuard] },
+      { path: 'my-releases', component: MyReleasesComponent, canActivate: [authGuard] },
+      { path: 'manage', component: ManageReleaseComponent, canActivate: [authGuard] },
+      { path: 'manage/:releaseId', component: ManageReleaseComponent, canActivate: [authGuard] },
+      { path: 'my-borrowed-releases', component: BorrowedReleaseListComponent, canActivate: [authGuard] },
+      { path: 'my-returned-releases', component: ReturnedReleasesComponent, canActivate: [authGuard] },
     ] 
   }
 ];
