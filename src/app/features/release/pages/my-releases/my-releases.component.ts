@@ -62,7 +62,7 @@ export class MyReleasesComponent implements OnInit {
   }
 
   editRelease(release: ReleaseResponse) {
-    throw new Error('Method not implemented.');
+    this.router.navigate(['releases', 'manage', release.id]);
   }
 
   shareRelease(release: ReleaseResponse) {
