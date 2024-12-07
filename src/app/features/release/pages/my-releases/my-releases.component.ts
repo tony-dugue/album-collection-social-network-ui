@@ -66,7 +66,13 @@ export class MyReleasesComponent implements OnInit {
   }
 
   shareRelease(release: ReleaseResponse) {
-    throw new Error('Method not implemented.');
+    this.releaseService.updateShareableStatus({
+      'release-id': release.id as number
+    }).subscribe({
+      next: () => {
+        release.shareable = !release.shareable;
+      }
+    });
   }
 
   archiveRelease(release: ReleaseResponse) {

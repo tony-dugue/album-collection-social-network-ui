@@ -1,5 +1,10 @@
 
-<div class="card" style="width: 20rem;">
+<div 
+  class="card" 
+  style="width: 20rem;"
+  [class.border-success]="release.shareable"
+  [class.border-warning]="release.archived"
+>
   <img height="200" [src]="releaseCover" class="card-img-top" alt="...">
   <div class="card-body overflow-scroll">
     <h5 class="card-title fs-6 text-nowrap fw-bold mb-1"><i class="fa-solid fa-book"></i>&nbsp;{{release.title}}</h5>
