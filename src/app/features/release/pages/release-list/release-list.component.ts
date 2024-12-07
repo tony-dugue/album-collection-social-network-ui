@@ -34,6 +34,28 @@ export class ReleaseListComponent implements OnInit {
       });
   }
 
+  borrowRelease(release: ReleaseResponse) {
+    this.message = '';
+    this.level = 'success';
+    this.releaseService
+      .borrowRelease({
+        'release-id': release.id as number,
+      })
+      .subscribe({
+        next: () => {
+          this.level = 'success';
+          this.message = 'Release successfully added to your list';
+        },
+        error: (err) => {
+          console.log(err);
+          this.level = 'error';
+          this.message = err.error.error;
+        },
+      });
+  }
+
+  // pagination
+
   gotToPage(page: number) {
     this.page = page;
     this.findAllReleases();
@@ -61,25 +83,5 @@ export class ReleaseListComponent implements OnInit {
 
   get isLastPage(): boolean {
     return this.page === (this.releaseResponse.totalPages as number) - 1;
-  }
-
-  borrowRelease(release: ReleaseResponse) {
-    this.message = '';
-    this.level = 'success';
-    this.releaseService
-      .borrowRelease({
-        'release-id': release.id as number,
-      })
-      .subscribe({
-        next: () => {
-          this.level = 'success';
-          this.message = 'Release successfully added to your list';
-        },
-        error: (err) => {
-          console.log(err);
-          this.level = 'error';
-          this.message = err.error.error;
-        },
-      });
   }
 }

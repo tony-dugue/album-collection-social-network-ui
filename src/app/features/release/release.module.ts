@@ -10,6 +10,7 @@ import { RatingComponent } from './components/rating/rating.component';
 import { MyReleasesComponent } from './pages/my-releases/my-releases.component';
 import { ManageReleaseComponent } from './pages/manage-release/manage-release.component';
 import { FormsModule } from '@angular/forms';
+import { BorrowedReleaseListComponent } from './pages/borrowed-release-list/borrowed-release-list.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     ReleaseCardComponent,
     RatingComponent,
     MyReleasesComponent,
-    ManageReleaseComponent
+    ManageReleaseComponent,
+    BorrowedReleaseListComponent
   ],
   imports: [
     CommonModule,
