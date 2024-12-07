@@ -7,6 +7,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ReleaseListComponent } from './pages/release-list/release-list.component';
 import { ReleaseCardComponent } from './components/release-card/release-card.component';
 import { RatingComponent } from './components/rating/rating.component';
+import { MyReleasesComponent } from './pages/my-releases/my-releases.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { RatingComponent } from './components/rating/rating.component';
     MenuComponent,
     ReleaseListComponent,
     ReleaseCardComponent,
-    RatingComponent
+    RatingComponent,
+    MyReleasesComponent
   ],
   imports: [
     CommonModule,
